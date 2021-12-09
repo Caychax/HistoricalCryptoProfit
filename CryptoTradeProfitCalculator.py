@@ -1,27 +1,3 @@
-'''
-UPDATED VERSION - 2021
-JLEBRON
-Please make sure you use the PEP guide for naming conventions in your submission
-- detailed guide: https://www.python.org/dev/peps/pep-0008/
-- some examples: https://stackoverflow.com/questions/159720/what-is-the-naming-convention-in-python-for-variable-and-function-names
-
-This assignment is heavily based on
-A Currency Converter GUI Program - Python PyQt5 Desktop Application Development Tutorial
-- GitHub: https://github.com/DarBeck/PyQT5_Tutorial/blob/master/currency_converter.py
-- YouTube: https://www.youtube.com/watch?v=weKpTw1SjM4 - detailed explanaton
-
-- Layout
-    - I would suggest QGridLayout
-    - Use a QCalendarWidget which you will get from Zetcode tutorial called "Widgets" http://zetcode.com/gui/pyqt5/widgets/
-
-PyCharm Configuration Options
-- Viewing Documentation when working with PyCharm https://www.jetbrains.com/help/pycharm/viewing-external-documentation.html
-- Configuring Python external Documenation on PyCharm https://www.jetbrains.com/help/pycharm/settings-tools-python-external-documentation.html
-'''
-
-# TODO: Delete the above, and include in a comment your name and student number
-# TODO: Remember to fully comment your code
-
 
 # standard imports
 import sys
@@ -48,10 +24,7 @@ class StockTradeProfitCalculator(QDialog):
     '''
 
     def __init__(self):
-        '''
-        This method requires substantial updates
-        Each of the widgets should be suitably initalized and laid out
-        '''
+
         super().__init__()
 
         # setting up dictionary of stocks
@@ -204,11 +177,7 @@ class StockTradeProfitCalculator(QDialog):
         self.graphWidget.plot(dev_y)
 
     def updateUi(self):
-        '''
-        This requires substantial development
-        Updates the Ui when control values are changed, should also be called when the app initializes
-        :return:
-        '''
+
 
         try:
             # update calander and labels on stock change
@@ -243,7 +212,7 @@ class StockTradeProfitCalculator(QDialog):
         except KeyError:
             self.purchaseTot.setText("no data")
 
-    ################ YOU DO NOT HAVE TO EDIT CODE BELOW THIS POINT  ########################################################
+
 
     def make_data(self):
         '''
@@ -259,11 +228,7 @@ class StockTradeProfitCalculator(QDialog):
             AAPL    -> 08/02/2013 -> 67.85
                     -> 11/02/2013 -> 65.56
 
-        Helpful tutorials to understand this
-        - https://stackoverflow.com/questions/482410/how-do-i-convert-a-string-to-a-double-in-python
-        - nested dictionaries https://stackoverflow.com/questions/16333296/how-do-you-create-nested-dict-in-python
-        - https://www.tutorialspoint.com/python3/python_strings.htm
-        :return: a dictionary of dictionaries
+
         '''
         file = open("combined.csv",
                     "r")  # open a CSV file for reading https://docs.python.org/3/library/functions.html#open
